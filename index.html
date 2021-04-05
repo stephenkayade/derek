@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Derek</title>
 </head>
 <style>
@@ -43,7 +44,7 @@
     /* ab0706 */
     #showcase {
         /* background: url('./image/HD-wallpaper-download3.jpg')no-repeat center center/cover; */
-        background: linear-gradient(106.51deg, rgba(177, 149, 71, 0.6) 0.51%, rgba(63, 61, 61, 0.6) 100%), url('./image/pngtree-food-overlook-food-overhead-breakfast-salad-image_14603.jpg')no-repeat center center/cover;
+        background: linear-gradient(106.51deg, rgba(129, 85, 60, 0.9) 0.51%, rgba(128, 92, 38, 0.9) 100%), url('./image/pngtree-food-overlook-food-overhead-breakfast-salad-image_14603.jpg')no-repeat center center/cover;
         /* background: #aaa; */
         display: flex;
         flex-direction: column;
@@ -80,7 +81,7 @@
 
     .about p {
         line-height: 2.0;
-        padding: 1rem;
+        padding: 1rem 0;
 
     }
 
@@ -103,14 +104,15 @@
     }
 
     #dishes {
-        background-color: #f1f1f1;
+        background-color: #e4dede;
+        padding-bottom: 4rem;
 
     }
 
     #dishes h2,
     .food-menu h2 {
         font-size: 2rem;
-
+        position: relative !important;
         font-family: 'Great Vibes', cursive;
     }
 
@@ -120,7 +122,7 @@
         background: rgb(229, 76, 42) none repeat scroll 0 0;
         height: 1px;
         margin-left: -67px;
-        bottom: -20px;
+        top: 100px;
         left: 50%;
         position: absolute;
 
@@ -156,7 +158,8 @@
     }
 
     #nav-bar {
-        background: linear-gradient(106.51deg, rgba(235, 218, 214, 0.8)100%, rgba(0, 0, 0, 0.8)0.51%);
+        background: linear-gradient(106.51deg, rgba(22, 22, 22, 0.8)100%, rgba(10, 10, 10, 0.8)0.51%);
+        z-index: 1;
     }
 
     .foodie h5 {
@@ -182,10 +185,117 @@
         background: #f1f1f1;
     }
 
-    #gallery h2, #registration h2 {
+    #gallery h2,
+    #registration h2 {
         font-family: 'Great Vibes', cursive;
     }
 
+    .img-center {
+        display: flex;
+        align-self: center;
+        height: 150px !important;
+        width: 170px !important;
+    }
+
+    .dish {
+        box-shadow: 0 .5rem 1rem rgba(190, 72, 3, 0.322) !important
+    }
+
+    .navbar-nav li a:hover {
+        transform: rotate(2deg) !important;
+
+    }
+
+    .group {
+        
+        border-top: 3px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .group .card {
+        border: none;
+        margin: 0 0.5rem;
+    }
+
+    .group h3 {
+        font-size: 16px;
+    }
+
+    .group p {
+        font-size: 13px;
+    }
+
+    @media(max-width: 500px) {
+        .img-center {
+            display: block;
+        }
+
+        #showcase h1,
+        .txt {
+            font-size: 20px !important;
+        }
+
+        #showcase p {
+            font-size: 17px;
+            padding: 0 1.5rem;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            text-transform: capitalize;
+
+        }
+
+        .about p {
+            font-size: 14px;
+        }
+
+        .popular-dish h2 {
+            font-size: 24px !important;
+            text-transform: capitalize;
+        }
+
+        .popular-dish p {
+            font-size: 14px;
+        }
+
+        .dish {
+            width: 250px !important;
+            height: 200px !important;
+            display: flex;
+            margin: auto;
+        }
+
+        .dish img {
+            width: 100px !important;
+            height: 150px !important;
+        }
+        #carouselExampleSlidesOnly {
+            display: flex !important;
+            flex-direction: column;
+        }
+        #carouselExampleSlidesOnly h2 {
+            font-size: 24px;
+            padding: 1rem !important;
+        }
+        #carouselExampleSlidesOnly p {
+            font-size:14px !important ;
+        }
+
+        .group .card img {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+        }
+
+        .group {
+            border: none;
+        }
+
+        .group .card .card-body p, .group .card .card-body h3{
+            text-align: center;
+        }
+    }
 </style>
 
 <body>
@@ -201,32 +311,31 @@
         </div>
         <a href="index.html"><img src="./image/logo.png" alt="derek logo" width="150" height="auto"></a>
     </nav> -->
-    <section id="nav-bar" class="py-4 w-100 d-flex justify-content-between" style="position: fixed;
+    <section id="nav-bar" class="py-1 px-5 w-100 d-flex justify-content-between" style="position: sticky;
    ">
 
         <div class="col-6 col-md-6">
 
             <a href="#"><img src="./image/spoon-png-vector-.png" alt="#"
-                    style="width: 100px; height:auto; position: absolute; z-index: 1; top: 0; left: 50px;"></a>
+                    style="width: 70px; height:auto; z-index: 1;"></a>
         </div>
 
-        <nav class="col-6 col-md-6 navbar navbar-expand-lg"
-            style="display: flex; justify-content: space-between; width: 100%;">
+        <nav class="col-6 col-md-6 navbar navbar-expand-lg" style="display: flex; justify-content: space-between;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars text-light"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#home">HOME</a>
+                        <a class="nav-link fw-bold text-white" href="#home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#about">ABOUT US</a>
+                        <a class="nav-link fw-bold text-white" href="#about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#contact">MEALS</a>
+                        <a class="nav-link fw-bold text-white" href="#contact">MEALS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bold text-white py-2 px-3 ml-3" href="#contact"
@@ -240,9 +349,7 @@
 
 
 
-        <div class="search col-2 col-md-2 mt-3 pr-3">
-            <a href="#prayer_requests" i class="fa fa-search" style="color: #FFFFFF;text-decoration: none;"></i></a>
-        </div>
+
 
     </section>
 
@@ -278,7 +385,7 @@
     </div>
     <section id="dishes" class="d-flex text-center flex-column" style="position: relative;">
         <div class="container">
-            <div class="row d-flex flex-column">
+            <div class="row d-flex flex-column popular-dish">
 
                 <h2 class=" text-capitalize py-5"><span class="span">our</span> popular dishes</h2>
                 <p class="pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
@@ -286,364 +393,265 @@
                     consequatur?
                     Dignissimos, quam cum!</p>
                 <div class="card-group">
-                    <div class="card shadow" style="height: 25rem;">
+                    <div class="card shadow dish" style="height: 20rem; width: 300px;">
                         <img src="./image/pngtree-birthday-chocolate-cake-vector-png-image_2135643.png"
-                            class="d-flex align-self-center d-block text-center" width="250px" height="auto" alt="">
+                            class="d-flex align-self-center d-block text-center" width="170px" height="auto" alt="">
                         <div class="card-body">
                             <h3 class="text-center">dish name here</h3>
                             <p class="lead card-text text-danger">$100</p>
                         </div>
                     </div>
-                    <div class="card shadow mx-md-5">
+                    <div class="card shadow mx-md-5 dish" style="height: 20rem; width: 300px;">
                         <img src="./image/pngtree-birthday-chocolate-cake-vector-png-image_2135643.png"
-                            class="img-fluid d-flex align-self-center d-block" width="250px" height="auto" alt="">
+                            class="img-fluid d-flex align-self-center d-block" width="170px" alt="">
                         <div class="card-body">
                             <h3 class="text-center">dish name here</h3>
                             <p class="lead card-text text-danger">$100</p>
                         </div>
                     </div>
-                    <div class="card shadow">
+                    <div class="card shadow dish"
+                        style="height: 20rem; width: 300px; display: flex; align-content: center;">
                         <img src="./image/pngtree-birthday-chocolate-cake-vector-png-image_2135643.png"
-                            class="img-fluid d-flex align-self-center d-block" width="250px" height="auto" alt="">
+                            class="img-fluid d-flex align-self-center d-block" width="170px" height="auto" alt="">
                         <div class="card-body">
                             <h3 class="text-center">dish name here</h3>
                             <p class="lead card-text text-danger">$100</p>
                         </div>
                     </div>
                 </div>
-                <div class="links py-5">
+                <!-- <div class="links py-5">
 
                     <a href="#" class="active span fw-bold btn">1</a><a href="#" class="px-3 fw-bold btn">2</a><a
                         href="#" class="fw-bold btn">3</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
-    <section id="food-menu">
-        <div class="container">
-            <div class="row d-flex text-center food-menu flex-column">
-                <h2 class=" text-capitalize py-5"><span class="span"> our</span> food menu</h2>
-                <p class="pb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
+    <div id="food-menu" class="container p-4">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <h2 class=" text-capitalize text-center py-5"><span class="span"> our</span> food menu</h2>
+                <p class="pb-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
                     illum, officiis debitis quos voluptas <br> illo doloribus magnam deserunt, assumenda asperiores
                     consequatur?
                     Dignissimos, quam cum!</p>
-                <div class="items position-relative">
-                    <img src="./image/Meat-PNG-Photo.png" class="position-absolute top-50 start-0 translate-middle-y"
-                        alt="" width="200px" height="auto">
-                    <img src="./image/Meat-PNG-Photo.png" class="position-absolute top-50 end-0 translate-middle-y"
-                        alt="" width="200px" height="auto">
-                    <ul class="d-flex justify-content-center">
-                        <li> <a href="#collapseExample" class="btn span" data-toggle="collapse">CAKES</a></li>
-                        <li><a href="#snacks" class="btn text-dark" data-toggle="collapse">SNACKS</a></li>
-                        <li><a href="#juice" class="btn text-dark" data-toggle="collapse">JUICE</a></li>
-                        <li><a href="#meat_pie" class="btn text-dark" data-toggle="collapse">MEAT PIE</a></li>
-                    </ul>
-
-
-                </div>
-                <div id="collapseExample" class="container active my-5">
-
-                    <div class="row d-flex justify-content-between px-5">
-                        <div class="col-12 col-md-5 d-flex py-2 border border-2 justify-content-center">
-                            <img src="./image/meat-pie-png-2-Transparent-Images.png" alt="" class="border-end"
-                                width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">meat pie</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card-group group">
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/meat-pie-png-2-Transparent-Images.png" alt="" class="border-right"
-                                width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">meat pie</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 my-5  border justify-content-center">
-                            <img src="./image/samosa-11562874236zbzfl3dgj3.png" alt="" class="border-right"
-                                width="100px" height="60px">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">samosa</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex my-5 py-2 justify-content-center border">
-                            <img src="./image/samosa-11562874236zbzfl3dgj3.png" alt="" class="border-right"
-                                width="100px" height="60px">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">nutritous samosa</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2  border justify-content-center">
-                            <img src="./image/small-chops-combo-260nw-792009508.png" alt="" class="border-right"
-                                width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">small chops</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/small-chops-combo-260nw-792009508.png" alt="" class="border-right"
-                                width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">small chops</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
                     </div>
                 </div>
-                <div id="snacks" class="container collapse my-5">
-
-                    <div class="row d-flex justify-content-between px-5">
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 border justify-content-center">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+              </div>
+              <div class="carousel-item">
+                <div class="card-group group">
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex my-5 py-2 border justify-content-center">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex my-5 py-2 justify-content-center border">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 border justify-content-center">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/3.jpg" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
                     </div>
                 </div>
-                <div id="juice" class="container collapse my-5">
-
-                    <div class="row d-flex justify-content-between px-5">
-                        <div class="col-12 col-md-5 border-2  d-flex py-2 border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+              </div>
+              <div class="carousel-item">
+                <div class="card-group group">
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 my-5  border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 my-5 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
+                    </div>
+                    <div class="card">
+                        <img class="d-block" src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" alt="">
+                        <div class="card-body">
+                            <h3 class="card-text">Lorem ipsum dolor sit amet.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, temporibus!</p>
                         </div>
                     </div>
                 </div>
-                <div id="meat_pie" class="container collapse my-5">
+              </div>
+              
+            </div>
+          </div>
+    </div>
+    
+       
+        <section id="gallery" class="d-flex text-center flex-column pb-5" style="position: relative;">
+            <div class="container">
+                <div class="row d-flex flex-column">
 
-                    <div class="row d-flex justify-content-between px-5">
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex my-5 py-2  border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex my-5 py-2 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 border justify-content-center">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
-                        <div class="col-12 col-md-5 border-2 d-flex py-2 justify-content-center border">
-                            <img src="./image/logo.png" alt="" class="border-right" width="100px" height="auto">
-                            <div class="foodie d-flex flex-column align-self-center">
-                                <h5 class="text-capitalize fw-bold">fried potatoes with garlic</h5>
-                                <p class="text-capitalize lead">mushroom/garlic/veggies</p>
-                            </div>
-                            <h3 class="work d-flex align-self-center">$100</h3>
-                        </div>
+                    <h2 class=" text-capitalize py-5"><span class="span">our</span> gallery</h2>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
+                        illum, officiis debitis quos voluptas <br> illo doloribus magnam deserunt, assumenda asperiores
+                        consequatur?
+                        Dignissimos, quam cum!</p>
+
+                    <div class="links my-5">
+
+                        <a href="#" class="active btn span text-uppercase fw-bold">all</a><a href="#"
+                            class="px-3 btn fw-bold text-uppercase">desert</a><a href="#"
+                            class="btn fw-bold text-uppercase">coffee</a><a href="#"
+                            class="px-3 btn fw-bold text-uppercase ">coffee</a><a href="#"
+                            class="btn fw-bold  text-uppercase">catering services</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="gallery" class="d-flex text-center flex-column pb-5" style="position: relative;">
-        <div class="container">
-            <div class="row d-flex flex-column">
+            <div class="container">
 
-                <h2 class=" text-capitalize py-5"><span class="span">our</span>  gallery</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
-                    illum, officiis debitis quos voluptas <br> illo doloribus magnam deserunt, assumenda asperiores
-                    consequatur?
-                    Dignissimos, quam cum!</p>
+                <div class="card-group">
 
-                <div class="links my-5">
+                    <div class="card border border-3 border-white mb-4 mx-4">
 
-                    <a href="#" class="active btn span text-uppercase fw-bold">all</a><a href="#"
-                        class="px-3 btn fw-bold text-uppercase">desert</a><a href="#"
-                        class="btn fw-bold text-uppercase">coffee</a><a href="#"
-                        class="px-3 btn fw-bold text-uppercase ">coffee</a><a href="#"
-                        class="btn fw-bold  text-uppercase">cathering services</a>
+                        <img src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" width="170px"
+                            height="170px" class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4 mb-4 mx-4">
+
+                        <img src="./image/cake-png-transparent-cake-images-pluspng-21.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4 mb-4 mx-4">
+
+                        <img src="./image/sweets-png-transparent-images--0.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mb-4 mx-4">
+
+                        <img src="./image/juice.png" width="170px" height="170px" class="img-center" alt="">
+                    </div>
+
+
+                </div>
+                <div class="card-group">
+
+                    <div class="card border border-3 border-white mb-4 mx-4">
+
+                        <img src="./image/istockphoto-962742914-170667a.jpg" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4 mb-4 mx-4">
+
+                        <img src="./image/samosa-11562874236zbzfl3dgj3.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4 mb-4 mx-4">
+
+                        <img src="./image/small-chops-combo-260nw-792009508.jpg" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mb-4 mx-4">
+
+                        <img src="./image/meat-pie-png-2-Transparent-Images.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+
+
+                </div>
+                <div class="card-group">
+
+                    <div class="card border border-3 border-white mx-4">
+
+                        <img src="./image/istockphoto-962742914-170667a.jpg" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4">
+
+                        <img src="./image/samosa-11562874236zbzfl3dgj3.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4">
+
+                        <img src="./image/small-chops-combo-260nw-792009508.jpg" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+                    <div class="card border border-3 border-white mx-4">
+
+                        <img src="./image/meat-pie-png-2-Transparent-Images.png" width="170px" height="170px"
+                            class="img-center" alt="">
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-        <div class="container">
 
-            <div class="card-group">
+        </section>
+        <section id="registration" class="d-flex text-center flex-column my-5" style="position: relative;">
+            <div class="container">
+                <div class="row d-flex flex-column">
 
-                <div class="card border border-3 border-white mb-4">
-
-                    <img src="./image/238-2389831_fried-spring-roll-png-spring-roll-images-png.png" height="250px" alt="">
+                    <h2 class=" text-capitalize py-4"><span class="span">make</span> a reservation</h2>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
+                        illum, officiis debitis quos voluptas <br> illo doloribus magnam deserunt, assumenda asperiores
+                        consequatur?
+                        Dignissimos, quam cum!</p>
                 </div>
-                <div class="card border border-3 border-white mx-4 mb-4">
-
-                    <img src="./image/cake-png-transparent-cake-images-pluspng-21.png" height="250px" alt="">
-                </div>
-                <div class="card border border-3 border-white mx-4 mb-4">
-
-                    <img src="./image/sweets-png-transparent-images--0.png" height="250px" alt="">
-                </div>
-                <div class="card border border-3 border-white mb-4">
-
-                    <img src="./image/juice.png" height="250px" alt="">
-                </div>
-
-
             </div>
-            <div class="card-group">
-
-                <div class="card border border-3 border-white">
-
-                    <img src="./image/istockphoto-962742914-170667a.jpg" height="250px" alt="">
-                </div>
-                <div class="card border border-3 border-white mx-4">
-
-                    <img src="./image/samosa-11562874236zbzfl3dgj3.png" height="250px" alt="">
-                </div>
-                <div class="card border border-3 border-white mx-4">
-
-                    <img src="./image/small-chops-combo-260nw-792009508.jpg" height="250px" alt="">
-                </div>
-                <div class="card border border-3 border-white">
-
-                    <img src="./image/meat-pie-png-2-Transparent-Images.png" height="250px" alt="">
-                </div>
+        </section>
 
 
-            </div>
-        </div>
-
-    </section>
-    <section id="registration" class="d-flex text-center flex-column my-5" style="position: relative;">
-        <div class="container">
-            <div class="row d-flex flex-column">
-
-                <h2 class=" text-capitalize py-4"><span class="span">make</span>  a reservation</h2>
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aut, fuga ipsam minima
-                    illum, officiis debitis quos voluptas <br> illo doloribus magnam deserunt, assumenda asperiores
-                    consequatur?
-                    Dignissimos, quam cum!</p>
-            </div>
-        </div>
-    </section>
-
-
-    <script src="./js/typewriter.js"></script>
+        <script src="./js/typewriter.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
 
 </body>
 
