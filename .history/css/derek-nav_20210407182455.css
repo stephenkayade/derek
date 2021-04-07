@@ -1,0 +1,12 @@
+#toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #e54c2a;
+    cursor: pointer;
+
+}
+
+#toggle

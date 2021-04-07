@@ -1,0 +1,37 @@
+#toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #e54c2a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height:2.5px;
+    background: #fff;
+    transform: translateY(-2px);
+    transition: 0.2s;
+   
+}
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    transform: translateY(5px);
+    background: #fff;
+    transition: 0.2s;
+    
+}
+
+#toggle ::before

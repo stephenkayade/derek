@@ -1,0 +1,129 @@
+#toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #e54c2a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+.bg-derek {
+    background: #e54c2a;
+}
+
+.bg-derek img {
+    margin-left: 2rem;
+}
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height:2px;
+    background: #fff;
+    transform: translateY(-2px);
+    transition: 0.2s;
+   
+}
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    transform: translateY(5px);
+    background: #fff;
+    transition: 0.2s;
+    
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#sidebar ul {
+    position: relative;
+    margin-top: 50px;
+    
+}
+
+#sidebar ul li {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+/* #sidebar ul li:hover {
+    background: #e54c2a;
+} */
+
+#sidebar ul li a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    letter-spacing: 2px;
+    line-height: 60px;
+    font-size: 1em;
+    color: black;
+    border-radius: 3px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+#sidebar ul li a:hover {
+    background: #e54c2a;
+    color: #fff;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+    
+}
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+    
+}
+
+@media(max-width: 500px) {
+    #sidebar {
+        width: 150px;
+    }
+    #sidebar ul {
+        margin-left: -3.2rem;
+    }
+}
+
+.animate-down {
+    display: flex;
+    align-items: center;
+    height: 2px;
+    width: 70px;
+}
+.animate-down::before {
+    content: '';
+    transform: translate(145px);
+    background: #fff;
+   
+}

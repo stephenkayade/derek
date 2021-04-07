@@ -1,0 +1,29 @@
+#toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #e54c2a;
+    cursor: pointer;
+
+}
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    top: 35%;
+    left: 15px;
+    height:2px;
+    background: #fff;
+
+}
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height:2px;
+    background: #fff;
+}
